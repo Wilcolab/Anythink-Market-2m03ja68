@@ -6,12 +6,13 @@
  * @param {Request} req - Express request object
  * @param {Response} res - Express response object
  * @param {Function} next - Express next middleware function
- * @returns {Object} JSON response with an empty comments arrayG
+ * @returns {Object} JSON response with an empty comments array
  */
 const express = require('express');
 const router = express.Router();
 
-//# sourceMappingURL=comments.js.map    
-router.get('/', function(res) {
-  res.json({comments: []});
+// GET /api/comments/
+router.get('/', function(req, res, next) {
+  res.json({ comments: [] });
 });
+//# sourceMappingURL=comments.js.map
